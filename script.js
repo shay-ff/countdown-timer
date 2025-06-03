@@ -1,6 +1,7 @@
 let countdownInterval;
 
 function startCountdown() {
+    console.log("Starting countdown...");
     const dateInput = document.getElementById("datePicker");
     const countdown = document.getElementById("countdown");
     const stopBtn = document.getElementById("stopBtn");
@@ -69,5 +70,11 @@ window.onload = function () {
         stopBtn.style.display = "none";
         stopBtn.onclick = stopCountdown;
         datePicker.parentNode.insertBefore(stopBtn, datePicker.nextSibling);
+    }
+
+    // Add event listener for the Start Countdown button
+    const startBtn = document.getElementById("startBtn");
+    if (startBtn) {
+        startBtn.onclick = startCountdown;
     }
 };
