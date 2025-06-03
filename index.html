@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dynamic Countdown</title>
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="card">
+        <h1>Set Your Special Day 🎉</h1>
+        <p>Select a future date and watch the countdown begin!</p>
+
+        <input type="date" id="datePicker" min="" />
+        <button onclick="startCountdown()">Start Countdown</button>
+        <button id="stopBtn" onclick="stopCountdown()" style="display: none;">Stop Countdown</button>
+
+        <div class="timer" id="countdown">⏳ Awaiting a date selection...</div>
+        <div style="margin-top: 24px; font-size: 0.9em; color: #888;">
+            Built by Adamya Rathore(7th Grade Section D) <a href="
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
