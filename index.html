@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dynamic Countdown</title>
-    <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Countdown</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="card">
-        <h1>Set Your Special Day 🎉</h1>
-        <p>Select a future date and watch the countdown begin!</p>
+  <div class="layout">
+    <section class="form-side">
+      <h1>🗓️ Plan Your Special Day</h1>
+      <p>Select a future date and begin your countdown.</p>
 
-        <input type="date" id="datePicker" min="" />
-        <button id="startBtn">Start Countdown</button>
-        <button id="stopBtn" style="display: none;">Stop Countdown</button>
+      <input type="date" id="datePicker" min="" />
+      <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" style="display: none;">Stop</button>
+      </div>
 
-        <div class="timer" id="countdown">⏳ Awaiting a date selection...</div>
-        <div style="margin-top: 24px; font-size: 0.9em; color: #888;">
-            Built by Adamya Rathore (7th Grade Section D)
-        </div>
-    </div>
-    <script src="script.js"></script>
+      <footer>— Built by Aaradhya Rathore, 7th D</footer>
+    </section>
+
+    <section class="display-side">
+      <div id="countdown" class="countdown-text">Awaiting selection...</div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
