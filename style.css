@@ -1,109 +1,104 @@
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
-  padding: 0;
-}
-
-body, html {
-  height: 100%;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
-  color: #1f2937;
-}
-
-.layout {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 100%;
-}
-
-.form-side {
-  width: 40%;
-  background: #ffffff;
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.05);
-}
-
-.form-side h1 {
-  font-size: 2rem;
-  color: #111827;
-  margin-bottom: 10px;
-}
-
-.form-side p {
-  color: #6b7280;
-  margin-bottom: 30px;
-  font-size: 0.95rem;
-}
-
-input[type="date"] {
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background-color: #3b82f6;
-  color: white;
-  transition: background-color 0.2s ease;
-}
-
-button:hover {
-  background-color: #2563eb;
-}
-
-#stopBtn {
-  background-color: #ef4444;
-}
-
-#stopBtn:hover {
-  background-color: #dc2626;
-}
-
-footer {
-  margin-top: 40px;
-  font-size: 0.75rem;
-  color: #9ca3af;
-}
-
-.display-side {
-  flex: 1;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.countdown-text {
-  font-size: 3rem;
-  text-align: center;
-  font-weight: 600;
+  min-height: 100vh;
   padding: 20px;
-  line-height: 1.4;
-  animation: fadeIn 1s ease-in;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card h1 {
+  color: #2b6777;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+input[type="date"] {
+  padding: 12px 15px;
+  border: 2px solid #d1d9e6;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus {
+  border-color: #2b6777;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #2b6777;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #406882;
+}
+
+#stopBtn {
+  margin-left: 10px;
+  background-color: #e63946;
+}
+
+#stopBtn:hover {
+  background-color: #c0392b;
+}
+
+.timer {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  color: #1d3557;
+  font-weight: bold;
+  min-height: 1.4em;
+  transition: all 0.3s ease;
+}
+
+.celebrate {
+  color: #2a9d8f;
+  animation: pulse 0.6s ease-in-out 2;
+}
+
+.stopped {
+  color: #e63946;
+  animation: fadeOut 1s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
 }
